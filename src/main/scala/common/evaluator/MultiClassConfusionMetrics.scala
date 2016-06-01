@@ -9,6 +9,7 @@ class MultiClassConfusionMetrics {
 
     // compute confusion matrix
     val metrics = new MulticlassMetrics(predictionsAndLabels)
+
     metrics.fMeasure
   }
 }

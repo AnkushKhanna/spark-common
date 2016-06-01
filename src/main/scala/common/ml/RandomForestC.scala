@@ -10,7 +10,7 @@ import org.apache.spark.sql.DataFrame
 class RandomForestC(sc: SparkContext) {
   def fit(data: DataFrame, test: DataFrame) = {
     println("**************************************************************" +
-      "RANDOM FOREST" +
+      "Random Froest" +
       "********************************************************************")
 
     val maxBin = 2
