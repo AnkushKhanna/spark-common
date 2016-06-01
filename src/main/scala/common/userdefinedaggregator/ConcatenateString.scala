@@ -1,20 +1,17 @@
-package common.userdefinedaggregate
+package common.userdefinedaggregator
 
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedAggregateFunction}
 import org.apache.spark.sql.types.{DataType, StringType, StructField, StructType}
 
-class ConcatenateMultipleColumn(columns: Seq[StructField]) extends UserDefinedAggregateFunction {
-  override def inputSchema: StructType = StructType(columns)
-
+class ConcatenateString(column: String) extends UserDefinedAggregateFunction {
+  override def inputSchema: StructType = StructType(
+    StructField(column, StringType) :: Nil
+  )
 
   override def update(buffer: MutableAggregationBuffer, input: Row): Unit = {
     if (input.getAs[String](0) != null) {
-      for (i <- 0 until columns.size) {
-        buffer(0) = buffer.getAs[String](0) + "_" +
-          input.getAs[String](i).replaceAll(",", "")
-      }
-      buffer(0) += " "
+      buffer(0) = buffer.getAs[String](0) + " " + input.getAs[String](0).replaceAll(",", "") //.replaceAll(" ", "")
     }
 
   }
