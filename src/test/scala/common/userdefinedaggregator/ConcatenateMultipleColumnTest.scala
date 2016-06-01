@@ -1,5 +1,6 @@
 package common.userdefinedaggregator
 
+import common.userdefinedaggregate.ConcatenateMultipleColumn
 import junit.framework.Assert
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.sql.types.{StringType, StructField}

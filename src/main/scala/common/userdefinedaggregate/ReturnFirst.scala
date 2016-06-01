@@ -1,4 +1,4 @@
-package common.userdefinedaggregator
+package common.userdefinedaggregate
 
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedAggregateFunction}
