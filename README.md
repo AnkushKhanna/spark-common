@@ -7,7 +7,7 @@ Although pipeline was a go to way. Sometime it became overloaded while experimen
 
 Ex: Maintaining intermediate transformation columns and passing column names between transformers.
 
-Thus I build a [Transform](https://github.com/AnkushKhanna/spark-common/blob/master/src/main/scala/common/transfomration/Transform.scala#L7-L14) class
+Thus I built a [Transform](https://github.com/AnkushKhanna/spark-common/blob/master/src/main/scala/common/transfomration/Transform.scala#L7-L14) class
 which was extended by the most common transformers I used, Tokenizer, Hashing, TFIDF.
 
 Thus now to chain Tokenizer and Hashing, we can use:
