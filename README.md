@@ -1,5 +1,3 @@
-# Some hacks to simplify programming with Spark.
-
 ### Chaining multiple transformers:
 Multiple times while trying to use more than one transformation, I was required to chain up Transformers or build a pipeline.
 
