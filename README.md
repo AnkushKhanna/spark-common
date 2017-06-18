@@ -1,7 +1,7 @@
 # Some hacks to simplify programming with Spark.
 
 ### Chaning multiple transformers:
-Mutliple times while trying to do use more than one transformation, I was required to chain up Transformers or build a pipeline.
+Mutliple times while trying to use more than one transformation, I was required to chain up Transformers or build a pipeline.
 
 Although pipeline was a go to way. Sometime it became overloaded while experimenting with different transfromations.
 
@@ -19,7 +19,6 @@ To add TFIDF the transfomrer would look like:
 val transform = new Transform with TTokenize with THashing with TIDF
 ```
 This works from left to right. So first Tokenizer would be applied then Hashing and at last TFIDF. 
-The
 
 This make life easier while trying out differnet Transformer combination, without the headace of maining intermediate columns.
 
