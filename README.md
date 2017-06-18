@@ -18,7 +18,7 @@ val transform = new Transform with TTokenize with THashing with TIDF
 ```
 This works from left to right. So first Tokenizer would be applied then Hashing and at last TFIDF. 
 
-This make life easier while trying out different Transformer combination, without the headache of maintaining intermediate columns.
+This make life easier while trying out different Transformer combinations, without the headache of maintaining intermediate columns.
 
 [See source code](https://github.com/AnkushKhanna/spark-common/blob/master/src/main/scala/common/transfomration/Transform.scala)
 
